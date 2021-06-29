@@ -25,11 +25,12 @@ To explore and find out correlation between popular or unpopular programming lan
 1. Python 3.+
 2. Required libraries that can be installed via "pip install": pandas, matplotlib, numpy, scipy
 3. This comes with archives that need to be unzipped in the same git folder under the archive name.
-	developer_survey_2017.zip > developer_survey_2017
-	developer_survey_2018.zip > developer_survey_2018
-	developer_survey_2019.zip > developer_survey_2019
-	developer_survey_2020.zip > developer_survey_2020
-	Alternatively all these data sets can be downloaded from the link at the top.
+	- developer_survey_2017.zip > developer_survey_2017
+	- developer_survey_2018.zip > developer_survey_2018
+	- developer_survey_2019.zip > developer_survey_2019
+	- developer_survey_2020.zip > developer_survey_2020
+	
+*Alternatively all these data sets can be downloaded from the link at the top.*
 
 # Project Motivation
 For this project, I was interestested in using developers surveys to explore:
@@ -48,12 +49,12 @@ For this project, I was interestested in using developers surveys to explore:
 # File Description
 In this repository you can find zipped archives with .CSV files which is the datasets used in our analysis and a .ipynb file which is a jupyter notebook file that contains the code for analysis.
 
-survey_results_public.csv: The csv contains data related to developers such as:
-CareerSatisfaction: Career satisfaction rating
-JobSatisfaction: Job satisfaction rating
-Overpaid: Compared to your estimate of your own market value, do you think you are...?
-Salary: What is your current annual base salary, before taxes, and excluding bonuses, grants, or other compensation?
-HaveWorkedLanguage: Which of the following languages have you done extensive development work in over the past year, and which do you want to work in over the next year?
+- survey_results_public.csv: The csv contains data related to developers such as:
+- CareerSatisfaction: Career satisfaction rating
+- JobSatisfaction: Job satisfaction rating
+- Overpaid: Compared to your estimate of your own market value, do you think you are...?
+- Salary: What is your current annual base salary, before taxes, and excluding bonuses, grants, or other compensation?
+- HaveWorkedLanguage: Which of the following languages have you done extensive development work in over the past year, and which do you want to work in over the next year?
 
 # Results
 All the assumptions and questions both were answered and visualized in the notebook.
