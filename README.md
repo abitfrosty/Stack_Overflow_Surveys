@@ -142,6 +142,7 @@ The correlation's (Rs) strength
 
 P-value of 0.05 (5%) or less is considered statistically significant and states the strong evidence for rejecting the H0 null hypothesis.
 |P-value|P-value, %|Evidence for rejecting H0|
+|-|-|-|
 |More than 0.1|>10%|Very weak to none|
 |Between 0.1 - 0.05|10%-5%|Weak|
 |Between 0.05 - 0.01|5%-1%|Strong|
@@ -149,8 +150,8 @@ P-value of 0.05 (5%) or less is considered statistically significant and states 
 
 For example, the H0 (null hypothesis) states that there's no correlation between programming language popularity and developer's satisfaction in 2017 year data.
 But analyzing 2 previous charts in [Modeling](https://github.com/abitfrosty/Stack_Overflow_Surveys#Modeling) step with such properties:
-	- **Pearson correlation coefficient (blue): 0.492**
-	- **SpearmanrResult(correlation=0.5360195360195361, pvalue=0.003953395285996525)**
+	- Pearson correlation coefficient (blue): 0.492
+	- SpearmanrResult(correlation=0.5360195360195361, pvalue=0.003953395285996525)
 
 *Blue are unpopular languages, red are popular languages*
 
@@ -179,10 +180,8 @@ We can reject the H0 hypothesis based on a moderate correlation value (~**0.49**
 ### File Description
 In this repository you can find zipped archives with .CSV files which is the datasets used in the analysis and a .ipynb files which is a jupyter notebook files that contain the code for analysis.
 The are 2 .ipynb files:
-1. Exploration
-	- Exploration of the dataset.
-2. Project 
-	- The main part of the analysis.
+1. Exploration - exploration of the dataset.
+2. Project - the main part of the analysis.
 
 ### Results
 All the assumptions and questions both were answered and visualized in the notebook.
