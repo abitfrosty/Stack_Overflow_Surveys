@@ -1,7 +1,7 @@
 # What is satisfaction for a programmer?
 ## Analyzing Stack Overflow's annual Developer Surveys
 
-![](.png)
+![Developer Salary by Overpaid feeling, 2017](pics/job_satisfaction_language_2020_v2.png)
 
 All the surveys data can be downloaded here:
 https://insights.stackoverflow.com/survey
@@ -12,7 +12,13 @@ For this research I've used data sets from the following years: 2017, 2018, 2019
 1. [Introduction](https://github.com/abitfrosty/Stack_Overflow_Surveys#Introduction)
 2. [Objective](https://github.com/abitfrosty/Stack_Overflow_Surveys#Objective)
 3. [Installations](https://github.com/abitfrosty/Stack_Overflow_Surveys#Installations)
-4. [Project Motivation](https://github.com/abitfrosty/Stack_Overflow_Surveys#Project-Motivation)
+4. [CRISP-DM](https://github.com/abitfrosty/Stack_Overflow_Surveys#CRISP-DM-methodology-analysis)
+	1. [Business understanding](https://github.com/abitfrosty/Stack_Overflow_Surveys#Business-understanding)
+	2. [Data understanding](https://github.com/abitfrosty/Stack_Overflow_Surveys#Data-understanding)
+	3. [Data preparation](https://github.com/abitfrosty/Stack_Overflow_Surveys#Data-preparation)
+	4. [Modeling](https://github.com/abitfrosty/Stack_Overflow_Surveys#Modeling)
+	5. [Evaluation](https://github.com/abitfrosty/Stack_Overflow_Surveys#Evaluation)
+	6. [Deployment](https://github.com/abitfrosty/Stack_Overflow_Surveys#Deployment)
 5. [File Description](https://github.com/abitfrosty/Stack_Overflow_Surveys#File-Description)
 6. [Results](https://github.com/abitfrosty/Stack_Overflow_Surveys#Results)
 7. [Licensing, Authors, and Acknowledgements](https://github.com/abitfrosty/Stack_Overflow_Surveys#Licensing,-Authors,-and-Acknowledgements)
@@ -34,7 +40,7 @@ To explore and find out correlation between popular or unpopular programming lan
 	
 *Alternatively all these data sets can be downloaded from the link at the top.*
 
-### CRISP-DM methodology analysis:
+### CRISP-DM methodology analysis
 #### 1. Business understanding
 	- Idea of this research is to provide the main aspects on developers' satisfaction for the organization. Why is this important? Because then the organization can be more succesful in hiring more qualified developer or less paid developer who prefers to downshift to a comfortable company for him.
 	- Assumptions:
@@ -44,6 +50,7 @@ To explore and find out correlation between popular or unpopular programming lan
 		1. Underpaid/overpaid feeling and what are the break points in salary?
 		2. How rare is 50,000, 100,000 or 150,000 USD salary among developers?
 		3. Which language was the most popular in 2017, 2018, 2019, 2020?
+		4. Which language had the best ratio of satisfaction/unsatisfaction in 2017, 2018, 2019, 2020?
 	
 #### 2. Data understanding
 	- The data is distributed over 4 files each containing survey questions for the certain year.
@@ -113,7 +120,8 @@ To explore and find out correlation between popular or unpopular programming lan
 #### 4. Modeling
 	- The question does not require machine learning.
 	- For visualization I'm using bar plots, scatter plots, line plots.
-![]()
+![Programming Language Popularity vs Satisfaction, 2017](pics/language_popularity_vs_satisfaction_2017_v2.png)
+![Programming Language Popularity vs Satisfaction KDE, 2017](pics/language_satisfaction_kde_2017_v2.png)
 
 #### 5. Evaluation
 	- Statistical methods used: 
@@ -121,7 +129,7 @@ To explore and find out correlation between popular or unpopular programming lan
 		- Regression line.
 		- KDE (Kernel Density Estimation) with medians.
 		- R-value (Rs), Pearson's correlation coefficient.
-		- P-value, Spearman's probability.
+		- R-value (Rs), p-value, Spearman's correlation coefficient and probability.
 	
 The correlation's (Rs) strength
 |R-value (positive or negative)|Meaning|
@@ -138,11 +146,36 @@ P-value of 0.05 (5%) or less is considered statistically significant and states 
 |Between 0.1 - 0.05|10%-5%|Weak|
 |Between 0.05 - 0.01|5%-1%|Strong|
 |Less than 0.01|<1%|Very strong|
- 
 
+For example, the H0 (null hypothesis) states that there's no correlation between programming language popularity and developer's satisfaction in 2017 year data.
+But analyzing 2 previous charts in [Modeling](https://github.com/abitfrosty/Stack_Overflow_Surveys#Modeling) step with such properties:
+	- **Pearson correlation coefficient (blue): 0.492**
+	- **SpearmanrResult(correlation=0.5360195360195361, pvalue=0.003953395285996525)**
+
+*Blue are unpopular languages, red are popular languages*
+
+We can reject the H0 hypothesis based on a moderate correlation value (~**0.49** Pearson's Rs and ~**0.54** Spearman's Rs) and very low p-value of ~**0.004** that states this correlation isn't due to a chance. And accept alternative hypothesis that says there is a moderate positive linear correlation between programming language popularity and developer's satisfaction in 2017 year data.
 
 #### 6. Deployment
-	
+
+##### Final conclusion on programming language satisfaction:
+		1. Unpopular languages tend to be more satisfying, is it true?
+			- No. The correlation was found in 2017 and 2018 but not in 2019 and 2020.
+		2. Overall satisfaction in programming languages does not change, is it true?
+			- No. There is a falling trend in languages' satisfaction that occurs not only in popular languages but in whole.
+	- Questions to be answered:
+		1. Underpaid/overpaid feeling and what are the break points in salary?
+			- Underpaid: 35,000, 55,000, 75,000, 110,000.
+			- Overpaid: 55,000, 85,000, 110,000.
+		2. How rare is 50,000, 100,000 or 150,000 USD salary among developers?
+			- Salary of 50,000 is around the 50th percentile.
+			- Salary of 100,000 is around the 90th percentile.
+			- Salary of 150,000 is around the 99th percentile.
+		3. Which language was the most popular in 2017, 2018, 2019, 2020?
+			- JavaScript is the most popular and the most satisfying programming language in the analysis of 2017, 2018, 2019 and 2020 years surveys.
+		4. Which language had the best ratio of satisfaction/unsatisfaction in 2017, 2018, 2019, 2020?
+			Smalltalk in 2017, Groovy in 2018, Ruby in 2019, R in 2020.
+
 ### File Description
 In this repository you can find zipped archives with .CSV files which is the datasets used in the analysis and a .ipynb files which is a jupyter notebook files that contain the code for analysis.
 The are 2 .ipynb files:
