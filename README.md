@@ -9,19 +9,19 @@ https://insights.stackoverflow.com/survey
 For this research I've used data sets from the following years: 2017, 2018, 2019 and 2020.
 
 ## Table of Contents
-1. [Introduction](https://github.com/abitfrosty/Stack_Overflow_Surveys#Introduction)
-2. [Objective](https://github.com/abitfrosty/Stack_Overflow_Surveys#Objective)
-3. [Installations](https://github.com/abitfrosty/Stack_Overflow_Surveys#Installations)
-4. [CRISP-DM](https://github.com/abitfrosty/Stack_Overflow_Surveys#CRISP-DM-methodology-analysis)
-	1. [Business understanding](https://github.com/abitfrosty/Stack_Overflow_Surveys#Business-understanding)
-	2. [Data understanding](https://github.com/abitfrosty/Stack_Overflow_Surveys#Data-understanding)
-	3. [Data preparation](https://github.com/abitfrosty/Stack_Overflow_Surveys#Data-preparation)
-	4. [Modeling](https://github.com/abitfrosty/Stack_Overflow_Surveys#Modeling)
-	5. [Evaluation](https://github.com/abitfrosty/Stack_Overflow_Surveys#Evaluation)
-	6. [Deployment](https://github.com/abitfrosty/Stack_Overflow_Surveys#Deployment)
-5. [File Description](https://github.com/abitfrosty/Stack_Overflow_Surveys#File-Description)
-6. [Results](https://github.com/abitfrosty/Stack_Overflow_Surveys#Results)
-7. [Licensing, Authors, and Acknowledgements](https://github.com/abitfrosty/Stack_Overflow_Surveys#Licensing,-Authors,-and-Acknowledgements)
+1. [Introduction](https://github.com/abitfrosty/Stack_Overflow_Surveys#introduction)
+2. [Objective](https://github.com/abitfrosty/Stack_Overflow_Surveys#objective)
+3. [Installations](https://github.com/abitfrosty/Stack_Overflow_Surveys#installations)
+4. [CRISP-DM](https://github.com/abitfrosty/Stack_Overflow_Surveys#crisp-dm-methodology-analysis)
+	1. [Business understanding](https://github.com/abitfrosty/Stack_Overflow_Surveys#1-business-understanding)
+	2. [Data understanding](https://github.com/abitfrosty/Stack_Overflow_Surveys#2-data-understanding)
+	3. [Data preparation](https://github.com/abitfrosty/Stack_Overflow_Surveys#3-data-preparation)
+	4. [Modeling](https://github.com/abitfrosty/Stack_Overflow_Surveys#4-modeling)
+	5. [Evaluation](https://github.com/abitfrosty/Stack_Overflow_Surveys#5-evaluation)
+	6. [Deployment](https://github.com/abitfrosty/Stack_Overflow_Surveys#6-deployment)
+5. [File Description](https://github.com/abitfrosty/Stack_Overflow_Surveys#file-description)
+6. [Results](https://github.com/abitfrosty/Stack_Overflow_Surveys#results)
+7. [Licensing, Authors, and Acknowledgements](https://github.com/abitfrosty/Stack_Overflow_Surveys#licensing-authors-acknowledgements)
 
 ### Introduction
 I have analyzed annual developers surveys. Each row in the data provides information about the programmer. I've used the data to visualize salary and how they feel about it in terms of being overpaid or underpaid, job and career satisfaction of the developers that use different programming languages, compared popularity of different languages on an absolute and percentage scale.
@@ -40,7 +40,7 @@ To explore and find out correlation between popular or unpopular programming lan
 	
 *Alternatively all these data sets can be downloaded from the link at the top.*
 
-### CRISP-DM methodology analysis
+### CRISP-DM methodology analysis (CRISP-DM stands for cross-industry process for data mining. The CRISP-DM methodology provides a structured approach to planning a data mining project.)
 #### 1. Business understanding
 	- Idea of this research is to provide the main aspects on developers' satisfaction for the organization. Why is this important? Because then the organization can be more succesful in hiring more qualified developer or less paid developer who prefers to downshift to a comfortable company for him.
 	- Assumptions:
